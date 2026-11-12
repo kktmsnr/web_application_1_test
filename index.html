@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBアプリケーション開発１ 確認クイズ</title>
+    <!-- 外部CSSファイルの読み込み -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- ヘッダータイトル -->
+        <h1>WEBアプリケーション開発１<br>確認クイズ</h1>
+        
+        <!-- 進捗表示（例: 第 1問 / 全 15問） -->
+        <div id="progress-container">
+            <span id="question-number">第 1問 / 全 15問</span>
+        </div>
+
+        <!-- クイズ出題エリア -->
+        <div id="quiz-box">
+            <div id="question-text">ここに問題文が表示されます</div>
+            
+            <!-- 〇×ボタンエリア -->
+            <div class="choices-container">
+                <button class="choice-btn" id="btn-true">〇</button>
+                <button class="choice-btn" id="btn-false">×</button>
+            </div>
+        </div>
+
+        <!-- 回答ごとのフィードバック・解説表示エリア（最初は非表示） -->
+        <div id="feedback-container" style="display: none;">
+            <div id="judgment-text"></div>
+            <div id="explanation-text"></div>
+            <button id="next-btn">次の問題へ</button>
+        </div>
+
+        <!-- 結果表示エリア（最初は非表示） -->
+        <div id="result-container" style="display: none;">
+            <h2>テスト終了！お疲れ様でした</h2>
+            <div id="score-text"></div>
+            <div id="rate-text"></div>
+            <button id="restart-btn">もう一度チャレンジする</button>
+        </div>
+    </div>
+
+    <!-- 外部JavaScriptファイルの読み込み（ページの読み込み完了後に実行） -->
+    <script src="script.js" defer></script>
+</body>
+</html>
